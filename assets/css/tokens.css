@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light dark;
+
+  --color-page: light-dark(#F4F7F3, #0C1310);
+  --color-surface: light-dark(#FFFFFF, #141D18);
+  --color-surface-muted: light-dark(#EAF0E8, #1A2620);
+  --color-ink: light-dark(#0F1D14, #E6EEE8);
+  --color-ink-soft: light-dark(#4D5E53, #A3B4A9);
+  --color-line: light-dark(#D7E1D5, #26352C);
+
+  --color-client: light-dark(#268543, #5FCB7F);
+  --color-client-strong: light-dark(#1C6634, #7FDA99);
+  --color-client-tint: light-dark(#E3F4E8, #16301F);
+  --color-on-client: light-dark(#FFFFFF, #062611);
+
+  --color-pro: light-dark(#0077A8, #5CC6F2);
+  --color-pro-bright: light-dark(#00A8E6, #5CC6F2);
+  --color-pro-tint: light-dark(#E2F3FA, #10303E);
+  --color-on-pro: light-dark(#FFFFFF, #00283A);
+
+  --color-price: light-dark(#FFD25A, #F2C14E);
+  --color-on-price: #2A1E00;
+
+  --color-heart: light-dark(#D93644, #F2555A);
+
+  --shadow-card: 0 1px 2px light-dark(rgb(16 40 24 / 0.06), rgb(0 0 0 / 0.4)),
+    0 12px 32px -12px light-dark(rgb(16 40 24 / 0.18), rgb(0 0 0 / 0.6));
+
+  --font-sans: "Readex Pro", "Segoe UI", Tahoma, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --text-2xl: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+  --text-display: clamp(2.5rem, 1.6rem + 4.2vw, 5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 999px;
+
+  --page-max-width: 72rem;
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
+  --header-height: 4.25rem;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root:has(#theme-switch:checked) {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-switch:checked) {
+    color-scheme: light;
+  }
+}
